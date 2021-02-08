@@ -321,7 +321,7 @@ Asset APIs
     }
     ```
 
-#### Get an asset's AssetVersioNId
+#### Get an asset's AssetVersionId
 * http://www.roblox.com/studio/plugins/info?assetId=1818
 
 ##### Download various versions of an asset
@@ -345,7 +345,7 @@ Returns an assetVersionId
 Useful Hacks
 ------------
 
-####Current User APIs
+#### Current User APIs
  * [/Game/GetCurrentUser.ashx](https://assetgame.roblox.com/Game/GetCurrentUser.ashx)
  * [/MobileAPI/UserInfo](https://www.roblox.com/mobileapi/userinfo)
 

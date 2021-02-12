@@ -26,7 +26,7 @@ Roblox API Sites
 | [economycreatorstats.roblox.com](https://economycreatorstats.roblox.com/docs) | Roblox.EconomyCreatorStats.Api endpoints. |
 | [engagementpayouts.roblox.com](https://engagementpayouts.roblox.com/docs) | For engagement-based payout information |
 | [followings.roblox.com](https://followings.roblox.com/docs) | Establishes follow relationship between subscriber entities (users, groups, etc) and source entities (games, groups, assets, etc.) |
-| [friends.roblox.com](https://friends.roblox.com/docs) | Friends, followers, and contacts management |
+| [friends.roblox.com](https://friends.roblox.com/docs) | Friends and followers management |
 | [gameinternationalization.roblox.com](https://gameinternationalization.roblox.com/docs) | Manages internationalization of games such as translating in game content. |
 | [gamejoin.roblox.com](https://gamejoin.roblox.com/docs) | All endpoints around launching a game |
 | [gamepersistence.roblox.com](https://gamepersistence.roblox.com/docs) | Endpoints for the in-game datastore system for storing data for games |
@@ -53,13 +53,18 @@ Roblox API Sites
 | [translationroles.roblox.com](https://translationroles.roblox.com/docs) | Manages translation roles of developers in game localization |
 | [translations.roblox.com](https://translations.roblox.com/docs) | Endpoints for requesting translations |
 | [twostepverification.roblox.com](https://twostepverification.roblox.com/docs) | Platform interface for the two step verification system |
-| [users.roblox.com](https://users.roblox.com/docs) | APIs for direct Roblox user information.
+| [users.roblox.com](https://users.roblox.com/docs) | APIs for direct Roblox user information. |
 | [voice.roblox.com](https://voice.roblox.com/docs) | APIs for Voice calls |
 
-Deprecated APIs
+<!--
+"Deprecated" is misleading as there's links to docs for newer endpoints
+Should fix inconsistency with the markdown, it goes from JS to JSON for showing response data
+request data should be HTTP, add more endpoints to make it more useful since the previous
+deletion of endpoints
+-->
+APIs
 ===============
 * [Thumbnail APIs](#thumbnail-apis)
-* [Set APIs](#set-apis)
 * [Group APIs](#group-apis)
 * [Friend APIs](#friend-apis)
 * [User APIs](#user-apis)
@@ -88,14 +93,14 @@ Thumbnail APIs
 * https://www.roblox.com/headshot-thumbnail/json?userId=1&width=180&height=180
   * Returns `{"Url":"https://tr.rbxcdn.com/c3ee609e91804ee2f15c6375355a381a/180/180/AvatarHeadshot/Png","Final":true}`
 
-* https://assetgame.roblox.com/Thumbs/Asset.ashx?width=110&height=110&assetId=1818
+* https://www.roblox.com/Thumbs/Asset.ashx?width=110&height=110&assetId=1818
   * Redirects to the URL. Also accepts `userAssetId`
 
-* https://assetgame.roblox.com/Thumbs/Asset.asmx/RequestThumbnail_v2?assetId=1818&assetVersionId=0&width=null&height=null&imageFormat=%22Png%22&thumbnailFormatId=296&overrideModeration=false
+* https://www.roblox.com/Thumbs/Asset.asmx/RequestThumbnail_v2?assetId=1818&assetVersionId=0&width=null&height=null&imageFormat=%22Png%22&thumbnailFormatId=296&overrideModeration=false
   * Returns `{"d":{"final":true,"url":"https://t3.rbxcdn.com/5d84cad6c2dda6a98ec94341bd418076"}}`
 
-* https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=1818&fmt=png&wd=420&ht=420
-* https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?assetVersionId=1&fmt=png&wd=420&ht=420
+* https://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=1818&fmt=png&wd=420&ht=420
+* https://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?assetVersionId=1&fmt=png&wd=420&ht=420
   * Redirects to the URL
   
 * http://www.roblox.com/bust-thumbnail/json?userId=2025110&height=180&width=180
